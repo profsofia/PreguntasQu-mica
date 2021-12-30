@@ -29,7 +29,6 @@ export class QuizComponent implements OnInit {
     this.randomize = Math.floor(Math.random()* this.quizzes.length);
   }
   onAnswer(option: boolean){
-
     setTimeout(
       ()=>{
         this.currentQuiz++;
@@ -44,6 +43,11 @@ export class QuizComponent implements OnInit {
     }
   
   }
+  nextQuestion(){
+    this.currentQuiz++;
+    this.randomize = Math.floor(Math.random()* this.quizzes.length);
+    this.answerSelected = false;
+}
   showResult(){
     this.result = true;
   }

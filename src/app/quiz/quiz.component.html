@@ -6,7 +6,7 @@
                 {{ currentQuiz +1 }} of {{  quizzes.length}}
             </p>
             <!--Para que sea dinámico, le ponemos el currentQuiz en vez del índice-->
-            <h1>{{ quizzes[randomize].question}}</h1>
+            <h3>{{ quizzes[randomize].question}}</h3>
             <ul class="list-group"
             *ngFor="let quiz of quizzes[randomize].answer"
             >
@@ -23,6 +23,9 @@
                 </li>
             </label>
             </ul>
+            <button
+            class="btn btn-dark btn-block"
+            (click)="nextQuestion()">Siguiente</button>
         </div>
         <div *ngIf="currentQuiz > 9">
             <button
