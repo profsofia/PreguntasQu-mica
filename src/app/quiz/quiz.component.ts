@@ -34,7 +34,7 @@ export class QuizComponent implements OnInit {
         this.currentQuiz++;
         this.randomize = Math.floor(Math.random()* this.quizzes.length);
         this.answerSelected = false;
-      }, 3000
+      }, 900000
     );
     if (option){
       this.correctAnswers++;
